@@ -1,7 +1,16 @@
 # in-class-activities
 ## Devlogs
 ### W1
+
 Write your W1 activity Devlog here.
+
+1. In the Hierarchy, move the Camera off of the Cat GameObject, so that it’s no longer a
+    child of the Cat. What happens when you run the game now, and why?
+        
+        Once unbounded from the cat, it no longer follows the cat's movement remaining fix in place as the cat runs off from the camera view.
+
+2. Please link your working Itch page.
+        [Air Cat](https://crystalwhiskers.itch.io/the-cat-is-doing-it-backwards)
 
 ### W2
 Create future Devlog sub-headers with the three # symbols, then write your Devlogs below them.
