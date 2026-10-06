@@ -13,7 +13,14 @@ Write your W1 activity Devlog here.
         [Air Cat](https://crystalwhiskers.itch.io/the-cat-is-doing-it-backwards)
 
 ### W2
-Create future Devlog sub-headers with the three # symbols, then write your Devlogs below them.
+
+1. If the r g b variables were intergers, there wouldn't be any variation in the color as the will stick to zero from their color or the absolute extremes. Booleans are only used for true/false statements like the 'if' and strings only input characters that the program cannot use to change colors.
+
+2. The _bounce variable counts individual bounces not 1/2 bounces if it was a float. Boolean, again, wouldn't make sense for counting anSd so does the string.
+
+3. All lines of code that aren't conditionals need a semi-colon for the program to read and recognize the code.
+
+### W#
 
 ## Open-Source Assets
 ### W1
