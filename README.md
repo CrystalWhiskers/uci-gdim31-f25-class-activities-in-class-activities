@@ -20,6 +20,20 @@ Write your W1 activity Devlog here.
 
 3. All lines of code that aren't conditionals need a semi-colon for the program to read and recognize the code.
 
+### W3
+
+Activity 1:
+Table 17:
+1. Integer for two parameters for the dialogue choice and friendship level with the secret being a boolean whether it is true that they know the secret or false. Output is a string.
+2. Float with the method having a formula to adjust the light levels.
+3. Float for the time in seconds to miliseconds and if between a specific value register as hit.
+
+Activity 2:
+Classes are your cookie cutters and they create components as a template defined by the class. Within that class, the cookie variables that define specific attribute about them whether they are frosted or burnt. Lastly the methods are what it can do. Either eat other cookies or attempt to eat the creator and failing miserably.
+
+Activity 3:
+Step 9s code has it where if the two float values, being the x and y linear velocity, is greater than the _speedThreshold, ColorMultipler becomes 1.5 which goes back to the Step 9 code multiplying the ballRenderer.color into a higher value. And since the speed of the ball increases with every bounce, the more it bounces the brighter it gets. If this wasn't the case, where the result isn't greater than the _speedThreshold, there won't be a color change since its multiplying by 1.0.
+
 ### W#
 
 ## Open-Source Assets
