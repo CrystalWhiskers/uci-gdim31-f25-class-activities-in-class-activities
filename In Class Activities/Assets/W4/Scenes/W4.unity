@@ -6971,6 +6971,7 @@ GameObject:
   - component: {fileID: 6397291155275392798}
   - component: {fileID: 6397291155275392799}
   - component: {fileID: 6397291155275392800}
+  - component: {fileID: 6397291155275392801}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -7012,10 +7013,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d6d353dff8fc42109ef4210a30e4487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CatW4
-  _moveSpeed: 2.5
-  _turnSpeed: 100
+  _moveSpeed: 4
+  _turnSpeed: 175
   _kickUpwardForce: 1
-  _kickForce: 2
+  _kickForce: 3
   _jumpForce: 5
   _rigidBody: {fileID: 0}
   _animator: {fileID: 6397291155275392794}
@@ -7038,10 +7039,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.1
-  m_Height: 1
+  m_Radius: 0.15
+  m_Height: 0.5
   m_Direction: 2
-  m_Center: {x: 0, y: 0.1, z: 0.3}
+  m_Center: {x: 0, y: 0.15, z: 0}
 --- !u!54 &6397291155275392800
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7069,6 +7070,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &6397291155275392801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6397291155275392791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d99774276e3f43b192a53df5fde03de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BounceOffWall
+  _rigidBody: {fileID: 6397291155275392800}
+  _bounceForce: 25
 --- !u!1 &6499904795538962815
 GameObject:
   m_ObjectHideFlags: 0
@@ -7337,6 +7352,7 @@ GameObject:
   - component: {fileID: 8101201615804560248}
   - component: {fileID: 8101201615804560250}
   - component: {fileID: 8101201615804560249}
+  - component: {fileID: 8101201615804560251}
   m_Layer: 0
   m_Name: SoccerBall
   m_TagString: Ball
@@ -7449,7 +7465,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!135 &8101201615804560250
 SphereCollider:
@@ -7472,6 +7488,20 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.07068241
   m_Center: {x: -0.000056624413, y: 0.00011789426, z: 0.00046431273}
+--- !u!114 &8101201615804560251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7741058300408910497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d99774276e3f43b192a53df5fde03de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BounceOffWall
+  _rigidBody: {fileID: 8101201615804560249}
+  _bounceForce: 10
 --- !u!4 &8115783459852817865
 Transform:
   m_ObjectHideFlags: 0
