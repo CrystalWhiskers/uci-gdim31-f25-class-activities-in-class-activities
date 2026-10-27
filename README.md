@@ -34,10 +34,9 @@ Classes are your cookie cutters and they create components as a template defined
 Activity 3:
 Step 9s code has it where if the two float values, being the x and y linear velocity, is greater than the _speedThreshold, ColorMultipler becomes 1.5 which goes back to the Step 9 code multiplying the ballRenderer.color into a higher value. And since the speed of the ball increases with every bounce, the more it bounces the brighter it gets. If this wasn't the case, where the result isn't greater than the _speedThreshold, there won't be a color change since its multiplying by 1.0.
 
-Activity 4:
-TABLE 14: We just used what we think is best for rigidbodies and trial by error. Both the ball and cat need a rigidbody with the goal have the trigger off, otherwise the ball can't pass through it. If it didn't work, try a different setting to see if it did.
+### W4
 
-### W#
+TABLE 14: We just used what we think is best for rigidbodies and trial by error. Both the ball and cat need a rigidbody with the goal have the trigger off, otherwise the ball can't pass through it. If it didn't work, try a different setting to see if it did.
 
 ## Open-Source Assets
 ### W1
