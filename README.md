@@ -38,6 +38,11 @@ Step 9s code has it where if the two float values, being the x and y linear velo
 
 TABLE 14: We just used what we think is best for rigidbodies and trial by error. Both the ball and cat need a rigidbody with the goal have the trigger off, otherwise the ball can't pass through it. If it didn't work, try a different setting to see if it did.
 
+### W6
+The PLAN:
+We need a Transform and NavMeshAgent. A Start() to begin the Deers behavior once, but no Update() because the command given in Start() should suffice. We need no collision method since the Deer isn't going to trigger anything.
+
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
