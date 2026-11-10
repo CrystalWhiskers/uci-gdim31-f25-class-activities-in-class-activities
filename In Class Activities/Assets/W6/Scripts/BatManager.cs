@@ -1,6 +1,8 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class BatManager : MonoBehaviour
 {
@@ -12,14 +14,19 @@ public class BatManager : MonoBehaviour
     // STEP 1 -----------------------------------------------------------------
     // Add a member variable named "_bats" that's an array of BatW6 Components.
     // In the Inspector, add ALL of the bats in the Scene.
-    
+
+    [SerializeField] private BatW6[] _bats;
+
     // STEP 1 -----------------------------------------------------------------
 
     // STEP 3 -----------------------------------------------------------------
     // Add a member variable named "_messages" that's an array of strings.
     // In the Inspector, add at least a few different messages for the bats to
     //      say when they reach the player.
-    
+
+    [SerializeField] private string[] _messages;
+
+
     // STEP 3 -----------------------------------------------------------------
 
     [SerializeField] private float[] _newTextTimers;
@@ -38,7 +45,7 @@ public class BatManager : MonoBehaviour
         // That means the bat at _bats[0] has a timer at _newTextTimers[0],
         //      the bat at _bats[1] has a timer at _newTextTimers[1],
         //      and so on.
-        // _newTextTimers = new [_bats.Length];
+        _newTextTimers = new float [_bats.Length];
         // STEP 6 -------------------------------------------------------------
     }
 
@@ -48,7 +55,11 @@ public class BatManager : MonoBehaviour
         // STEP 7 -------------------------------------------------------------
         // Loop through all of the entries in _newTextTimers, and increase each
         //      timer's value by the amount of time that passed this frame.
-        
+
+        for (int i = 0; i < _newTextTimers.Length; i++)
+        {
+            _newTextTimers[i] += Time.deltaTime;
+        }
 
         // STEP 7 -------------------------------------------------------------
 
@@ -64,6 +75,24 @@ public class BatManager : MonoBehaviour
         //      to help you with that distance check :)
         // https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Vector3.html
         //
+
+        for (int i = 0; i < _bats.Length; i++)
+        {
+            float distance = Vector3.Distance(_bats[i].transform.position, _playerTransform.position);
+
+            if (distance < _interactDistance)
+            {
+                _bats[i].StartChasing(_playerTransform);
+            }
+            else
+            {
+                _bats[i].StopChasing();
+            }
+            if (distance < _overlapDistance)
+            {
+                CreateReactions(_bats[i]);
+            }
+        }
         // STEP 4
         // Also inside this for loop, if the distance between the bat and the
         //      player is less than _overlapDistance, call CreateReactions()
@@ -92,6 +121,9 @@ public class BatManager : MonoBehaviour
         //
         // The first argument to SpawnReactionUI is same bat in the parameters
         //      of CreateReactions.
+
+        int index = Random.Range(0, _messages.Length);
+        SpawnReactionUI(bat, _messages[index]);
         
         // STEP 5 -------------------------------------------------------------
     }
@@ -107,7 +139,7 @@ public class BatManager : MonoBehaviour
         // /* starts the comments, and */ ends it.
         // Simply uncomment the below lines by removing the /* and */ to finish.
 
-        /*
+        
         int index = System.Array.IndexOf(_bats, bat);
         
         GridLayoutGroup layout = bat.GetComponentInChildren<GridLayoutGroup>();
@@ -117,7 +149,7 @@ public class BatManager : MonoBehaviour
             TMP_Text textObj = Instantiate(_reactionUiPrefab, layout.transform);
             textObj.text = message;
         }
-        */
+        
 
         // STEP 8 -------------------------------------------------------------
     }

@@ -43,6 +43,15 @@ The PLAN:
 We need a Transform and NavMeshAgent. A Start() to begin the Deers behavior once, but no Update() because the command given in Start() should suffice. We need no collision method since the Deer isn't going to trigger anything.
 
 
+### W7
+
+Table Acivity:
+I did the 4. Math
+https://docs.google.com/document/d/1XDWYyMudvxGwSmHYFAoLHSPJA9q0LByFpcUUr684WHo/edit?tab=t.0
+
+The Plan for Coding W6:
+We need member variables for how fast the Bat moves, a bool for whether the Bat is chasing, and the target of the mouse. We need to make two methods StartChasing() and StopChasing() the well known Update(). The former to control the Bat's behavior and the latter to constantly monitor the Bat's behavior every second.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
